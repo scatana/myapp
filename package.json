@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && ncp src/proxy-server.mjs dist/myapp/server/proxy-server.mjs",
+    "build": "ng build && ncp proxy-server.mjs dist/myapp/server/proxy-server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers ChromeHeadless --watch false",
     "serve:ssr:myapp": "node dist/myapp/server/proxy-server.mjs"
