@@ -22,3 +22,9 @@ jobs:
         run: npm test
       - name: Building the app
         run: npm run build
+      - name: Archiving build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 5
