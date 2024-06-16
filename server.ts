@@ -41,10 +41,9 @@ export function app(): express.Express {
     })
   );
 
+  // All regular routes use the Angular engine
   const REQUEST = new InjectionToken<Request>('REQUEST');
   const RESPONSE = new InjectionToken<Response>('RESPONSE');
-
-  // All regular routes use the Angular engine
   server.get('**', (req, res, next) => {
     const { protocol, originalUrl, headers } = req;
 
